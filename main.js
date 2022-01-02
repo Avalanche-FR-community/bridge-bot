@@ -88,16 +88,16 @@ const settings = {
             direction: 'both',
             telegram: {
                 chatId: -1001128030094 ,
-                relayJoinMessages: true,
-                relayLeaveMessages: true,
+                relayJoinMessages: false,
+                relayLeaveMessages: false,
                 sendUsernames: true,
                 relayCommands: true,
                 crossDeleteOnDiscord: true,
             },
             discord : {
                 channelId: '925766631358070784',
-                relayJoinMessages: true,
-                relayLeaveMessages: true,
+                relayJoinMessages: false,
+                relayLeaveMessages: false,
                 sendUsernames: true,
                 crossDeleteOnTelegram: true,
             }
