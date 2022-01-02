@@ -59,12 +59,51 @@ const settingsPathYAML = args.config;
 migrateSettingsToYAML(settingsPathJSON, settingsPathYAML);
 
 // Get the settings
-const rawSettingsObj = jsYaml.safeLoad(fs.readFileSync(settingsPathYAML));
-const settings = Settings.fromObj(rawSettingsObj);
+// const rawSettingsObj = jsYaml.safeLoad(fs.readFileSync(settingsPathYAML));
+// const settings = Settings.fromObj(rawSettingsObj);
 
 // ZANÉ CUSTOM CHANGES ################################################
-settings.discord.token = process.env.DISCORD_TOKEN
-settings.telegram.token = process.env.TELEGRAM_TOKEN
+// settings.discord.token = process.env.DISCORD_TOKEN
+// settings.telegram.token = process.env.TELEGRAM_TOKEN
+
+const settings = {
+    debug: false,
+    telegram: {
+        useFirstNameInsteadOfUsername: false,
+        colonAfterSenderName: false,
+        skipOldMessages: true,
+        sendEmojiWithStickers: true,
+        token: process.env.TELEGRAM_TOKEN,
+    },
+    discord : {
+        useNickname: false,
+        skipOldMessages: true,
+        replyLength: 100,
+        maxReplyLines: 2,
+        token: process.env.DISCORD_TOKEN
+    },
+    bridges : [
+        {
+            name: 'APE',
+            direction: 'both',
+            telegram: {
+                chatId: -1001128030094 ,
+                relayJoinMessages: true,
+                relayLeaveMessages: true,
+                sendUsernames: true,
+                relayCommands: true,
+                crossDeleteOnDiscord: true,
+            },
+            discord : {
+                channelId: '925766631358070784',
+                relayJoinMessages: true,
+                relayLeaveMessages: true,
+                sendUsernames: true,
+                crossDeleteOnTelegram: true,
+            }
+        }
+    ]
+}
 
 // Initialize logger
 const logger = new Logger(settings.debug);
