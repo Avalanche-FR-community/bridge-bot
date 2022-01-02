@@ -62,6 +62,10 @@ migrateSettingsToYAML(settingsPathJSON, settingsPathYAML);
 const rawSettingsObj = jsYaml.safeLoad(fs.readFileSync(settingsPathYAML));
 const settings = Settings.fromObj(rawSettingsObj);
 
+// ZANÉ CUSTOM CHANGES ################################################
+settings.discord.token = process.env.DISCORD_TOKEN
+settings.telegram.token = process.env.TELEGRAM_TOKEN
+
 // Initialize logger
 const logger = new Logger(settings.debug);
 
