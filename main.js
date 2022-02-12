@@ -59,7 +59,8 @@ const settingsPathYAML = args.config;
 migrateSettingsToYAML(settingsPathJSON, settingsPathYAML);
 
 // Get the settings
-// const rawSettingsObj = jsYaml.safeLoad(fs.readFileSync(settingsPathYAML));
+const rawSettingsObj = jsYaml.safeLoad(fs.readFileSync(settingsPathYAML));
+console.log(rawSettingsObj);
 // const settings = Settings.fromObj(rawSettingsObj);
 
 // ZANÉ CUSTOM CHANGES ################################################
