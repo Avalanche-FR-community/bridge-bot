@@ -24,4 +24,49 @@ bridges:
       relayLeaveMessages: true
       sendUsernames: true
       crossDeleteOnTelegram: true
+  - name: DEV
+    direction: both
+    telegram:
+      chatId: -1001389294904  # maj ok
+      relayJoinMessages: true
+      relayLeaveMessages: true
+      sendUsernames: true
+      relayCommands: true
+      crossDeleteOnDiscord: true
+    discord:
+      channelId: '914969065339093113'       # maj ok
+      relayJoinMessages: true
+      relayLeaveMessages: true
+      sendUsernames: true
+      crossDeleteOnTelegram: true
+  - name: DeFi
+    direction: both
+    telegram:
+      chatId: -1001159575520  # maj ok
+      relayJoinMessages: true
+      relayLeaveMessages: true
+      sendUsernames: true
+      relayCommands: true
+      crossDeleteOnDiscord: true
+    discord:
+      channelId: '925464078292488212'       # maj ok
+      relayJoinMessages: true
+      relayLeaveMessages: true
+      sendUsernames: true
+      crossDeleteOnTelegram: true
+  - name: Trading
+    direction: both
+    telegram:
+      chatId: -1001263677450    # maj ok 
+      relayJoinMessages: true
+      relayLeaveMessages: true
+      sendUsernames: true
+      relayCommands: true
+      crossDeleteOnDiscord: true
+    discord:
+      channelId: '925826513146892339'       # maj ok
+      relayJoinMessages: true
+      relayLeaveMessages: true
+      sendUsernames: true
+      crossDeleteOnTelegram: true
 debug: false
