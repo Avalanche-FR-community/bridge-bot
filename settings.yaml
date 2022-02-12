@@ -69,4 +69,4 @@ bridges:
       relayLeaveMessages: true
       sendUsernames: true
       crossDeleteOnTelegram: true
-debug: false
+debug: true
